@@ -79,16 +79,29 @@ class ListRender extends Component {
   }
 
   render() {
+    const detailList = this.info.map((detail) => <Details detail={detail} />);
     return (
+      // method 1
+      // <div>
+      //     {this.info.map((detail) => (
+      //       <span key={detail.id}>
+      //         <h3>
+      //           {detail.id} {detail.name} {detail.email}
+      //         </h3>
+      //       </span>
+      //     ))}
+      // </div>
+
+      //method 2
+
       <div>
-        <table>
-          {this.info.map((detail) => (
-            <span key={detail.id}>
-              <h3>
-                {detail.id} {detail.name} {detail.email}
-              </h3>
-            </span>
-          ))}
+        <table border="solid">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+          </tr>
+          {detailList}
         </table>
       </div>
     );

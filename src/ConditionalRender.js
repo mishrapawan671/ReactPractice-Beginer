@@ -29,7 +29,14 @@ class ConditionalRender extends Component {
     //approch 3 conditional approch
     // return this.state.isLoggedIn ?<h1>Logged In</h1> : <h1>not Logged In</h1>
     //approch 4 short circuit approch, it either shows message or not
-    return this.state.isLoggedIn && <h1>Logged In</h1>;
+
+    return (
+      <div>
+        {" "}
+        example Condinal render using Logged in{" "}
+        {this.state.isLoggedIn && <h1>Logged In</h1>}
+      </div>
+    );
   }
 }
 export default ConditionalRender;
