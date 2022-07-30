@@ -1,9 +1,10 @@
 const Details = ({ detail }) => {
   // console.log(props.id);
   return (
-    <tr>
+    <tr key={detail.id}>
       <td>{detail.id}</td>
-      <td>{detail.first_name}</td> <td>{detail.email}</td>{" "}
+      <td>{detail.first_name}</td>
+      <td>{detail.email}</td>
     </tr>
   );
 };
